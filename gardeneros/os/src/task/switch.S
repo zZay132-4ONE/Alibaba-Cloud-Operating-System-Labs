@@ -1,4 +1,4 @@
-.altmacro 
+.altmacro
 .macro SAVE_SN n
     sd s\n, (\n+1)*8(sp)
 .endm
@@ -21,7 +21,7 @@ __switch:
     .rept 12
         SAVE_SN %n
         .set n, n + 1
-    .endr
+    .endr 
     # ready for loading TaskContext a1 points to
     ld sp, 0(a1)
     # load registers in the TaskContext

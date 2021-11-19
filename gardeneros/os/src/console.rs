@@ -6,9 +6,9 @@ impl Write for Stdout {
         for c in s.chars() {
             console_putchar(c as usize);
         }
-        Ok(()) 
+        Ok(())
     }
-}
+} 
 pub fn print(args: fmt::Arguments) {
     Stdout.write_fmt(args).unwrap();
 }

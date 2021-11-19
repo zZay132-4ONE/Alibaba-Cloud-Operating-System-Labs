@@ -8,13 +8,13 @@ use core::cell::RefCell;
 use lazy_static::*;
 use switch::__switch;
 use task::{TaskControlBlock, TaskStatus};
- 
+
 pub use context::TaskContext;
 
 pub struct TaskManager {
     num_app: usize,
     inner: RefCell<TaskManagerInner>,
-}
+} 
 
 struct TaskManagerInner {
     tasks: [TaskControlBlock; MAX_APP_NUM],

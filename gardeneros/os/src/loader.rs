@@ -13,12 +13,12 @@ struct KernelStack {
 struct UserStack {
     data: [u8; USER_STACK_SIZE],
 }
- 
+
 static KERNEL_STACK: [KernelStack; MAX_APP_NUM] = [
     KernelStack { data: [0; KERNEL_STACK_SIZE], };
     MAX_APP_NUM
 ];
-
+ 
 static USER_STACK: [UserStack; MAX_APP_NUM] = [
     UserStack { data: [0; USER_STACK_SIZE], };
     MAX_APP_NUM

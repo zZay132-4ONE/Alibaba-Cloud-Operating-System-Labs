@@ -9,11 +9,11 @@ impl TaskControlBlock {
         &self.task_cx_ptr as *const usize
     }
 }
- 
+
 #[derive(Copy, Clone, PartialEq)]
 pub enum TaskStatus {
     UnInit,
     Ready,
-    Running,
+    Running, 
     Exited,
 }

@@ -17,10 +17,10 @@ SECTIONS
     etext = .;
     srodata = .;
     .rodata : {
-        *(.rodata .rodata.*) 
+        *(.rodata .rodata.*)
         *(.srodata .srodata.*)
     }
-
+ 
     . = ALIGN(4K);
     erodata = .;
     sdata = .;

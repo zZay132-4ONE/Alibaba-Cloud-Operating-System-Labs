@@ -10,6 +10,6 @@ impl TaskContext {
         Self {
             ra: __restore as usize,
             s: [0; 12],
-        } 
+        }
     }
-}
+} 
