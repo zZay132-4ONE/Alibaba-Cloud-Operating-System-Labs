@@ -17,7 +17,7 @@ SECTIONS
     etext = .;
     srodata = .;
     .rodata : {
-        *(.rodata .rodata.*)
+        *(.rodata .rodata.*) 
         *(.srodata .srodata.*)
     }
 
