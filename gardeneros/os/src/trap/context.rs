@@ -8,8 +8,8 @@ pub struct TrapContext {
     pub kernel_satp: usize,
     pub kernel_sp: usize,
     pub trap_handler: usize,
-} 
-
+}
+ 
 impl TrapContext {
     pub fn set_sp(&mut self, sp: usize) { self.x[2] = sp; }
     pub fn app_init_context(
@@ -20,6 +20,7 @@ impl TrapContext {
         trap_handler: usize,
     ) -> Self {
         let mut sstatus = sstatus::read();
+        // set CPU privilege to User after trapping back
         sstatus.set_spp(SPP::User);
         let mut cx = Self {
             x: [0; 32],

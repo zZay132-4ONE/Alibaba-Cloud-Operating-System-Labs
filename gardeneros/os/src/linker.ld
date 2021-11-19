@@ -6,7 +6,7 @@ SECTIONS
 {
     . = BASE_ADDRESS;
     skernel = .;
-
+ 
     stext = .;
     .text : {
         *(.text.entry)
@@ -16,7 +16,7 @@ SECTIONS
         . = ALIGN(4K);
         *(.text .text.*)
     }
- 
+
     . = ALIGN(4K);
     etext = .;
     srodata = .;

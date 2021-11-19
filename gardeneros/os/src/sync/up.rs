@@ -1,5 +1,5 @@
 use core::cell::{RefCell, RefMut};
-
+ 
 /// Wrap a static data structure inside it so that we are
 /// able to access it without any `unsafe`.
 ///
@@ -11,7 +11,7 @@ pub struct UPSafeCell<T> {
     /// inner data
     inner: RefCell<T>,
 }
- 
+
 unsafe impl<T> Sync for UPSafeCell<T> {}
 
 impl<T> UPSafeCell<T> {

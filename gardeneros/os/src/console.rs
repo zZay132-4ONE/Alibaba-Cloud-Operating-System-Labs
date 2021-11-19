@@ -8,10 +8,10 @@ impl Write for Stdout {
         }
         Ok(())
     }
-}
+} 
 pub fn print(args: fmt::Arguments) {
     Stdout.write_fmt(args).unwrap();
-} 
+}
 #[macro_export]
 macro_rules! print {
     ($fmt: literal $(, $($arg: tt)+)?) => {
